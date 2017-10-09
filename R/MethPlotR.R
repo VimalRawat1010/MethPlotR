@@ -23,7 +23,10 @@ file.list=list( test1="extdata/test1.myCpG.txt", test2="extdata/test2.myCpG.txt"
 
 
 
-myobj=methRead( file.list,sample.id=list("test1","test2","ctrl1","ctrl2"),assembly="tair10",treatment=c(1,1,0,0))
+myobj=methRead(file.list,sample.id=list("test1","test2","ctrl1","ctrl2"),assembly="tair10",treatment=c(1,1,0,0))
+vimalObj =methBedRead(file.list,sampleNames)
+
+
 
 #typeof(myobj)
 getMethylationStats(myobj[[2]],plot=F,both.strands=F)
@@ -68,9 +71,6 @@ methBedRead <- setClass(
 
 )
 
-
-
-  vimalObj =methBedRead(file.list,sampleNames)
 
 
 
